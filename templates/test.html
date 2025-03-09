@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resim Yükleme</title>
+</head>
+<body>
+<div>
+    <h1>Resim Yükleme</h1>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+    <form id="uploadForm" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" id="fileInput" onchange="submitForm()">
+        <input type="text" name="resim" id="resimInput" value="{{ full_filename or '' }}">
+    </form>
+
+    <script>
+        function submitForm() {
+            document.getElementById("uploadForm").submit();
+        }
+    </script>
+</div>
+</body>
+</html>

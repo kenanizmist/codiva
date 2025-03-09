@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Giriş Sayfası</title>
+    <style>
+        /* Stil tanımlarınızı buraya ekleyin (ASP'deki stilleriniz) */
+        .message-container {
+            /* ASP'deki stil tanımlarınız */
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        .error-message {
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <table class="message-container">
+        <tr>
+            <td>
+                <div class="message-container">
+                    <div id="error-message" class="error-message">{{ error }}</div>
+                    <form action="{{ url_for('giris_kontrol') }}" method="post">  <!-- action özelliğini güncelleyin -->
+                        <b>Lütfen Şifrenizi Girin:</b><br><br>
+                        <input type="password" id="password" name="password" style="height:30px;"><br><br>
+                        <input type="submit" class="btn" value="Giriş">
+                    </form>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="window.location.href='{{ url_for('index') }}'" class="btn"><b>Geri</b></button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
