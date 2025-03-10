@@ -22,9 +22,10 @@ app = Flask(__name__, template_folder='templates/harc/dist/pages')
 # SECRET KEY EKLE
 app.config['SECRET_KEY'] = 'cok gizli anahtar'  # Güçlü bir anahtar oluşturun (örneğin, os.urandom(24).hex())
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:\\inetpub\\wwwroot\\db\\db.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/kenanizmist/db.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # app.config['SQLALCHEMY_ECHO'] = True  # SQL sorgularını yazdır (hata ayıklama için)
+
 db = SQLAlchemy(app)
 CORS(app)  # CORS'u etkinleştir
 
