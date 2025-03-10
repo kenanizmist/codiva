@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+			color: #fff;
+			font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        .message-container {
+            text-align: center;
+			text-color: #ffffff;
+            background-color: #0056b3;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .error-message {
+            color: #ff0000;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+		.btn {
+        margin: 0 5px;
+        padding: 8px 15px;
+        background-color: #07b55b;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+		text-decoration:none;
+		width: 200px;
+		}
+		.lbl{
+		text-color: #ffffff;
+		}
+    </style>
+    <script>
+        function validatePassword(event) {
+            const passwordInput = document.getElementById("password");
+            const errorMessage = document.getElementById("error-message");
+
+            if (!passwordInput.value.trim()) {
+                errorMessage.textContent = "Şifre alanı boş bırakılamaz. Lütfen şifrenizi giriniz.";
+                event.preventDefault(); // Formun gönderilmesini engelle
+                return false;
+            }
+            return true; // Form gönderilir
+        }
+    </script>
+    
+	  
+  <script>
+    var currentPath = window.location.pathname;
+    if (currentPath.includes(".html")) {
+        var cleanPath = currentPath.replace(".html", "");
+        history.pushState(null, null, cleanPath);
+    }
+</script>
+	
+</head>
+<body>
+<table class="message-container">
+	<tr>
+		<td>
+			<div class="message-container">
+        <div id="error-message" class="error-message"></div>
+        <form action="{{ url_for('giris_kontrol2') }}" method="post" onsubmit="return validatePassword(event)">
+            <b>Lütfen Şifrenizi Girin:</b><br><br>
+            <input type="password" id="password" name="password" style="height:30px;"><br><br>
+            <input type="submit" class="btn" value="Giriş">
+        </form>
+    </div>
+
+		</td>
+	</tr>
+	<tr>
+		<td>		
+			<button onclick="window.location.href='/'" class="btn"><b>Geri</button>				
+		</td>
+	</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link type="text/css" rel="stylesheet" href="uploader.css" />
+    <link rel="stylesheet" href="SyntaxHighlighter.css" type="text/css" />
+    <title>ASP Uploader Installation</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="default.htm">ASP Uploader</a></h1>
+            <ul>
+                <li><a href="default.htm">Home</a></li>
+                <li><a href="deployment.htm">Installation</a></li>
+                <li><a href="https://aspuploader.com/Order.asp" class="button">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+    <article id="content">
+        <h2>Deployment ASP File Uploader</h2>
+        <p>
+            ASP Uploader is 100% HTML and JavaScript code on the client, and ASP code on the server, and can be setup on your web server in just 5 minutes, simply by following this setup guide.
+        </p>
+        <h3>
+            1. Deploying Uploader Client files.
+        </h3>
+        <p>The "aspuploader" folder and all file it contains (located in the archive) should be deployed to http://{your site}/{your application}/aspuploader/ on your web site.</p>
+
+        <h3>2. Adding Uploader into ASP page.</h3>
+        <p>
+            <div class="dp-highlighter">
+                <div class="bar"></div>
+                <ol class="dp-xml">
+                    <li class="alt"><span style="background-color: yellow" class="tag">&lt;</span><span style="background-color: yellow">%</span><span> @&nbsp;</span><span class="attribute">Language</span><span>=</span><span class="attribute-value">"VBScript" </span><span style="background-color: yellow">%</span><span style="background-color: yellow" class="tag">&gt;</span><span>&nbsp;&nbsp;</span></li>
+                    <li><span></span><span class="comments">&lt;!--Step&nbsp;1:&nbsp;Register&nbsp;Uploader&nbsp;to&nbsp;your&nbsp;page&nbsp;--&gt;</span><span>&nbsp;&nbsp;</span></span></li>
+                    <li class="alt"><span></span><span class="comments">&lt;!--&nbsp;#include&nbsp;file="aspuploader/include_aspuploader.asp"&nbsp;--&gt;</span><span>&nbsp;&nbsp;</span></span></li>
+                    <li><span></span><span class="tag">&lt;</span><span class="tag-name">html</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li>
+                    <li class="alt"><span></span><span class="tag">&lt;</span><span class="tag-name">body</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag-name">div</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li>
+                    <li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;<span style="background-color: yellow" class="tag">&lt;</span><span style="background-color: yellow">%</span></li>
+                    <li><span class="comments">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Step&nbsp;2:&nbsp;Create&nbsp;Uploader&nbsp;object&nbsp;&nbsp; &nbsp;&nbsp;</span></li>
+                    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dim&nbsp;uploader &nbsp;&nbsp;</span></li>
+                    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set&nbsp;</span><span class="attribute">uploader</span><span>=</span><span class="attribute-value">new</span><span>&nbsp;AspUploader &nbsp;&nbsp;</span></span></li>
+                    <li><span class="comments">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Step&nbsp;3:&nbsp;Set a unique name to Uploader</span></li>
+                    <li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="vars">uploader</span><span>.Name=</span><span class="string">"myuploader"</span></span></li>
+                    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">uploader.SaveDirectory</span><span>=</span><span class="attribute-value">"savefiles"</span><span>&nbsp;&nbsp;</span></span></li>
+                    <li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">uploader.AllowedFileExtensions</span><span>=</span><span class="attribute-value">"*.jpg,*.png,*.gif"</span><span>&nbsp;&nbsp;</span></span></li>
+                    <li><span class="comments">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Step&nbsp;4:&nbsp;Render&nbsp;Uploader</span></li>
+                    <li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uploader.Render()</span></li>
+                    <li class="alt">&nbsp;&nbsp;&nbsp;&nbsp;<span style="background-color: yellow">%</span><span style="background-color: yellow" class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/</span><span class="tag-name">div</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li>
+                    <li class="alt"><span></span><span class="tag">&lt;/</span><span class="tag-name">body</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span></li>
+                    <li><span></span><span class="tag">&lt;/</span><span class="tag-name">html</span><span class="tag">&gt;</span><span>&nbsp;&nbsp;</span></span> </li>
+                </ol>
+            </div>
+        </p>
+
+    </article>
+    <div class="clear">
+    </div>
+    <footer>
+        <div class="con">
+
+            <div class="box">
+                <h5>Uploader Products</h5>
+                <ul>
+                    <li><a href="https://blazoruploader.com/" target="_blank">Uploader for Blazor Server</a></li>
+                    <li><a href="https://webassembly-demos.blazoruploader.com/" target="_blank">Uploader for Blazor WASM</a></li>
+                    <li><a href="https://ajaxuploader.com/" target="_blank">Ajax Uploader (Web Forms)</a></li>
+                    <li><a href="http://phpfileuploader.com/" target="_blank">PHP File Uploader</a></li>
+                    <li><a href="http://aspuploader.com/" target="_blank">ASP File Uploader</a></li>
+
+                </ul>
+            </div>
+            <div class="box">
+                <h5>Editor Products</h5>
+                <ul>
+                    <li><a href="https://blazoreditor.com/" target="_blank">Blazor Rich Text Editor</a></li>
+                    <li><a href="https://richtexteditor.com/" target="_blank">Javascript Rich Text Editor</a></li>
+                    <li><a href="http://richtexteditor.net/" target="_blank">Rich Text Editor for .NET</a></li>
+                    <li><a href="http://phphtmleditor.com/" target="_blank">Rich Text Editor for PHP</a></li>
+                    <li><a href="http://asp.richtexteditor.com/" target="_blank">Rich Text Editor for ASP</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <h5>Products</h5>
+                <ul>
+                    <li><a href="https://javascriptobfuscator.com/" target="_blank">Javascript Obfuscator</a></li>
+                    <li><a href="https://mylivechat.com/" target="_blank">Free Chat Software</a></li>
+                    <li><a href="http://dchat.com/" target="_blank">Free Video Chat Room</a></li>
+                    <li><a href="http://freeobfuscator.com/" target="_blank">Free .NET obfuscator</a></li>
+                    <li><a href="https://zchat.com/" target="_blank">On-premises Live Chat</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+</html>

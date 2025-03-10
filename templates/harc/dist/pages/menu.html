@@ -1,0 +1,55 @@
+
+    <!--begin::App Wrapper-->
+   
+          <nav class="mt-2">
+            <!--begin::Sidebar Menu-->
+            <ul
+              class="nav sidebar-menu flex-column"
+              data-lte-toggle="treeview"
+              role="menu"
+              data-accordion="false">
+   
+              <li class="nav-item">
+                <a href="{{ url_for('main_sayfasi') }}" class="nav-link">
+                  <i class="bi bi-building-fill-down"></i>
+                  <p>
+                    Dashboard
+                  </p>
+                </a>
+               </li>  
+              <li class="nav-item">
+                <a href="{{ url_for('harc_giris_sayfasi') }}" class="nav-link">
+                  <i class="bi bi-building-fill-down"></i>
+                  <p>
+                    Harcirah Giriş
+                  </p>
+                </a>
+               </li>
+              <li class="nav-item">
+                <a href="{{ url_for('harc_onay_sayfasi') }}" class="nav-link">
+                  <i class="bi bi-person-check"></i>
+                  <p>
+                    Harcirah Onay
+                  </p>
+                </a>
+               </li>
+              <li class="nav-item">
+                <a href="{{ url_for('harc_liste_sayfasi') }}" class="nav-link">
+                  <i class="bi bi-card-checklist"></i>
+                  <p>
+                    Harcirah Liste
+                  </p>
+                </a>
+               </li>
+              <li class="nav-item">
+               <a href="{{ url_for('index_sayfasi') }}" class="nav-link">
+                  <i class="nav-icon bi bi-circle text-danger"></i>
+                  <p>
+                    Çıkış
+                  </p>
+                </a>
+               </li>
+			   </ul>
+            <!--end::Sidebar Menu-->
+          </nav>
+        
